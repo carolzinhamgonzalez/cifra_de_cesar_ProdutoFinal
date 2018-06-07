@@ -1,5 +1,5 @@
 var stringUser = prompt('Insira a palavra que você quer codificar com a Cifra de César:');
-while (stringUser === ''| !isNaN(stringUser)) { 
+while (stringUser === ''| !isNaN(stringUser)) {
   alert('Insira apenas letras');
   stringUser = prompt('Insira a palavra que você quer codificar com a Cifra de César:');
 }
@@ -34,7 +34,7 @@ function decipher (resultCipher) {
     if (96 < numberAscii[j] < 123){
       codeNumberAscii.push((numberAscii[j] - 97 - 7) % 26 + 97);
     }
-    else if (numberAscii[j] > 64 && numberAscii[j] < 91){
+    else if (64 < numberAscii[j] < 91){
       codeNumberAscii.push((numberAscii[j] - 65 - 7) % 26 + 65);
     }
  }
