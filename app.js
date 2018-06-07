@@ -16,8 +16,18 @@ while (stringUser === '') { //| typeof parseInt(stringUser) === 'number'){
 console.log(numberAscii);
 //for para descobrir o numero Ascii de cada letra codificada
   for (j = 0; j < numberAscii.length; j++){
-    codeNumberAscii.push((numberAscii[j] - 65 + 7) % 26 + 65);
+    if (96 < numberAscii[j] < 123){
+      codeNumberAscii.push((numberAscii[j] - 97 + 7) % 26 + 97);
+    } else if ((64 < numberAscii[j] < 91)){
+      codeNumberAscii.push((numberAscii[j] - 65 + 7) % 26 + 65);
+    }
+  //  if (64 < numberAscii[j] < 91){
+  //    codeNumberAscii.push((numberAscii[j] - 65 + 7) % 26 + 65);
+  //  } else if (96 < numberAscii[j] < 123){
+  //    codeNumberAscii.push((numberAscii[j] - 97 + 7) % 26 + 97);
+  //  }
   }
+
 //}
 console.log(codeNumberAscii);
 
